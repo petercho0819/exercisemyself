@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<entry key="lastNum">
+        SELECT
+               MAX(A.EMP_ID)
+          FROM EMPLOYEE_COPY A
+	</entry>
+	<entry key="empNum">
+        SELECT
+               A.EMP_ID
+             , A.EMP_NAME
+          FROM EMPLOYEE_COPY A
+	</entry>
+	<entry key="insertMem">
+		INSERT
+ 		 INTO EMPLOYEE_COPY A
+		( A.EMP_ID, A.EMP_NAME, A.EMP_NO, A.JOB_CODE, A.SAL_LEVEL)
+		VALUES
+		(?, ?, ?, ?, ?)
+	</entry>
+</properties>
